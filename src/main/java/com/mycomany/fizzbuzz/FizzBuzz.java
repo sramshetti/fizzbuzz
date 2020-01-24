@@ -23,6 +23,16 @@ public class FizzBuzz {
     private final Predicate<Integer> divisibleByOrContains3And5 = number -> (divisibleBy3OrContains3.test(number) && divisibleBy5OrContains5.test(number));
 
 
+    /**
+     * Prints out the following for contiguous range of numbers
+     *  the number
+     *  fizz for numbers that are multiples of 3
+     *  buzz for numbers that are multiples of 5
+     *  fizzbuzz for numbers that are multiples of 3 & 5
+     *
+     * @param n the max number to print till
+     * @return list of strings
+     */
     public List<String> fizzBuzz(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Invalid value passed " + n);
@@ -44,6 +54,17 @@ public class FizzBuzz {
         return list;
     }
 
+
+    /**
+     * Prints out the following for contiguous range of numbers
+     *  the number
+     *  fizz for numbers that are multiples of 3 or have 3 in it
+     *  buzz for numbers that are multiples of 5 or have 5 in it
+     *  fizzbuzz for numbers that satisfy both conditions above
+     *
+     * @param n the max number to print till
+     * @return list of strings
+     */
 
     public List<String> fizzBuzzEnhanced(int n) {
         if (n < 0) {
